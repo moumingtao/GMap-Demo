@@ -13,12 +13,14 @@ namespace Sky5.GMapDemo
     class UcActions: ListBox
     {
         internal UcMap Map;
-        public UcActions()
+
+        protected override void OnPaint(PaintEventArgs e)
         {
-            var type = this.GetType();
+            base.OnPaint(e);
+            if (this.DataSource != null) return;
             List<MethodInfo> testMethods = new List<MethodInfo>();
             DisplayMember = nameof(MethodInfo.Name);
-            foreach (var method in type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly))
+            foreach (var method in this.GetType().GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly))
             {
                 if (method.GetParameters().Length == 0)
                 {
@@ -32,7 +34,7 @@ namespace Sky5.GMapDemo
         {
             base.OnMouseDoubleClick(e);
             var method = (MethodInfo)this.SelectedItem;
-            method.Invoke(this, null);
+            if(method != null) method.Invoke(this, null);
         }
 
         public void 使用GoogleChinaMap提供地图()
