@@ -28,47 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gMap = new GMap.NET.WindowsForms.GMapControl();
             this.pnlMenu = new Sky5.WinForms.Panel();
             this.xPanderPanelList1 = new Sky5.WinForms.XPanderPanelList();
             this.pnlPropertyView = new Sky5.WinForms.XPanderPanel();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
-            this.xPanderPanel2 = new Sky5.WinForms.XPanderPanel();
+            this.pnlOthers = new Sky5.WinForms.XPanderPanel();
+            this.ucOthers1 = new Sky5.GMapDemo.UcActions();
             this.xPanderPanel3 = new Sky5.WinForms.XPanderPanel();
+            this.ucMap = new Sky5.GMapDemo.UcMap();
             this.pnlMenu.SuspendLayout();
             this.xPanderPanelList1.SuspendLayout();
             this.pnlPropertyView.SuspendLayout();
+            this.pnlOthers.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gMap
-            // 
-            this.gMap.Bearing = 0F;
-            this.gMap.CanDragMap = true;
-            this.gMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gMap.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMap.GrayScaleMode = false;
-            this.gMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMap.LevelsKeepInMemmory = 5;
-            this.gMap.Location = new System.Drawing.Point(0, 0);
-            this.gMap.MarkersEnabled = true;
-            this.gMap.MaxZoom = 2;
-            this.gMap.MinZoom = 2;
-            this.gMap.MouseWheelZoomEnabled = true;
-            this.gMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMap.Name = "gMap";
-            this.gMap.NegativeMode = false;
-            this.gMap.PolygonsEnabled = true;
-            this.gMap.RetryLoadTile = 0;
-            this.gMap.RoutesEnabled = true;
-            this.gMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMap.ShowTileGridLines = false;
-            this.gMap.Size = new System.Drawing.Size(518, 450);
-            this.gMap.TabIndex = 0;
-            this.gMap.Zoom = 0D;
             // 
             // pnlMenu
             // 
+            this.pnlMenu.AssociatedSplitter = null;
             this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenu.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 11.75F, System.Drawing.FontStyle.Bold);
             this.pnlMenu.CaptionHeight = 27;
@@ -105,7 +81,7 @@
             // 
             this.xPanderPanelList1.CaptionStyle = Sky5.WinForms.CaptionStyle.Flat;
             this.xPanderPanelList1.Controls.Add(this.pnlPropertyView);
-            this.xPanderPanelList1.Controls.Add(this.xPanderPanel2);
+            this.xPanderPanelList1.Controls.Add(this.pnlOthers);
             this.xPanderPanelList1.Controls.Add(this.xPanderPanel3);
             this.xPanderPanelList1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xPanderPanelList1.GradientBackground = System.Drawing.Color.Empty;
@@ -143,12 +119,11 @@
             this.pnlPropertyView.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.pnlPropertyView.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.pnlPropertyView.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
-            this.pnlPropertyView.Expand = true;
             this.pnlPropertyView.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlPropertyView.Image = null;
             this.pnlPropertyView.Name = "pnlPropertyView";
             this.pnlPropertyView.PanelStyle = Sky5.WinForms.PanelStyle.Office2007;
-            this.pnlPropertyView.Size = new System.Drawing.Size(282, 371);
+            this.pnlPropertyView.Size = new System.Drawing.Size(282, 25);
             this.pnlPropertyView.TabIndex = 0;
             this.pnlPropertyView.Text = "地图属性";
             this.pnlPropertyView.ToolTipTextCloseIcon = null;
@@ -160,43 +135,54 @@
             this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid1.Location = new System.Drawing.Point(1, 25);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(280, 346);
+            this.propertyGrid1.Size = new System.Drawing.Size(280, 0);
             this.propertyGrid1.TabIndex = 0;
             // 
-            // xPanderPanel2
+            // pnlOthers
             // 
-            this.xPanderPanel2.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
-            this.xPanderPanel2.CustomColors.BackColor = System.Drawing.SystemColors.Control;
-            this.xPanderPanel2.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.xPanderPanel2.CustomColors.CaptionCheckedGradientBegin = System.Drawing.Color.Empty;
-            this.xPanderPanel2.CustomColors.CaptionCheckedGradientEnd = System.Drawing.Color.Empty;
-            this.xPanderPanel2.CustomColors.CaptionCheckedGradientMiddle = System.Drawing.Color.Empty;
-            this.xPanderPanel2.CustomColors.CaptionCloseIcon = System.Drawing.SystemColors.ControlText;
-            this.xPanderPanel2.CustomColors.CaptionExpandIcon = System.Drawing.SystemColors.ControlText;
-            this.xPanderPanel2.CustomColors.CaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.xPanderPanel2.CustomColors.CaptionGradientEnd = System.Drawing.SystemColors.ButtonFace;
-            this.xPanderPanel2.CustomColors.CaptionGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.xPanderPanel2.CustomColors.CaptionPressedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(188)))), ((int)(((byte)(235)))));
-            this.xPanderPanel2.CustomColors.CaptionPressedGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(188)))), ((int)(((byte)(235)))));
-            this.xPanderPanel2.CustomColors.CaptionPressedGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(188)))), ((int)(((byte)(235)))));
-            this.xPanderPanel2.CustomColors.CaptionSelectedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(243)))));
-            this.xPanderPanel2.CustomColors.CaptionSelectedGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(243)))));
-            this.xPanderPanel2.CustomColors.CaptionSelectedGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(243)))));
-            this.xPanderPanel2.CustomColors.CaptionSelectedText = System.Drawing.SystemColors.ControlText;
-            this.xPanderPanel2.CustomColors.CaptionText = System.Drawing.SystemColors.ControlText;
-            this.xPanderPanel2.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.xPanderPanel2.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.xPanderPanel2.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
-            this.xPanderPanel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.xPanderPanel2.Image = null;
-            this.xPanderPanel2.Name = "xPanderPanel2";
-            this.xPanderPanel2.PanelStyle = Sky5.WinForms.PanelStyle.Office2007;
-            this.xPanderPanel2.Size = new System.Drawing.Size(282, 25);
-            this.xPanderPanel2.TabIndex = 1;
-            this.xPanderPanel2.Text = "xPanderPanel2";
-            this.xPanderPanel2.ToolTipTextCloseIcon = null;
-            this.xPanderPanel2.ToolTipTextExpandIconPanelCollapsed = null;
-            this.xPanderPanel2.ToolTipTextExpandIconPanelExpanded = null;
+            this.pnlOthers.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
+            this.pnlOthers.Controls.Add(this.ucOthers1);
+            this.pnlOthers.CustomColors.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlOthers.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.pnlOthers.CustomColors.CaptionCheckedGradientBegin = System.Drawing.Color.Empty;
+            this.pnlOthers.CustomColors.CaptionCheckedGradientEnd = System.Drawing.Color.Empty;
+            this.pnlOthers.CustomColors.CaptionCheckedGradientMiddle = System.Drawing.Color.Empty;
+            this.pnlOthers.CustomColors.CaptionCloseIcon = System.Drawing.SystemColors.ControlText;
+            this.pnlOthers.CustomColors.CaptionExpandIcon = System.Drawing.SystemColors.ControlText;
+            this.pnlOthers.CustomColors.CaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.pnlOthers.CustomColors.CaptionGradientEnd = System.Drawing.SystemColors.ButtonFace;
+            this.pnlOthers.CustomColors.CaptionGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.pnlOthers.CustomColors.CaptionPressedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(188)))), ((int)(((byte)(235)))));
+            this.pnlOthers.CustomColors.CaptionPressedGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(188)))), ((int)(((byte)(235)))));
+            this.pnlOthers.CustomColors.CaptionPressedGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(188)))), ((int)(((byte)(235)))));
+            this.pnlOthers.CustomColors.CaptionSelectedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(243)))));
+            this.pnlOthers.CustomColors.CaptionSelectedGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(243)))));
+            this.pnlOthers.CustomColors.CaptionSelectedGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(215)))), ((int)(((byte)(243)))));
+            this.pnlOthers.CustomColors.CaptionSelectedText = System.Drawing.SystemColors.ControlText;
+            this.pnlOthers.CustomColors.CaptionText = System.Drawing.SystemColors.ControlText;
+            this.pnlOthers.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.pnlOthers.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.pnlOthers.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
+            this.pnlOthers.Expand = true;
+            this.pnlOthers.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pnlOthers.Image = null;
+            this.pnlOthers.Name = "pnlOthers";
+            this.pnlOthers.PanelStyle = Sky5.WinForms.PanelStyle.Office2007;
+            this.pnlOthers.Size = new System.Drawing.Size(282, 371);
+            this.pnlOthers.TabIndex = 1;
+            this.pnlOthers.Text = "测试方法";
+            this.pnlOthers.ToolTipTextCloseIcon = null;
+            this.pnlOthers.ToolTipTextExpandIconPanelCollapsed = null;
+            this.pnlOthers.ToolTipTextExpandIconPanelExpanded = null;
+            // 
+            // ucOthers1
+            // 
+            this.ucOthers1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucOthers1.ItemHeight = 12;
+            this.ucOthers1.Location = new System.Drawing.Point(1, 25);
+            this.ucOthers1.Name = "ucOthers1";
+            this.ucOthers1.Size = new System.Drawing.Size(280, 346);
+            this.ucOthers1.TabIndex = 0;
             // 
             // xPanderPanel3
             // 
@@ -233,31 +219,60 @@
             this.xPanderPanel3.ToolTipTextExpandIconPanelCollapsed = null;
             this.xPanderPanel3.ToolTipTextExpandIconPanelExpanded = null;
             // 
+            // ucMap
+            // 
+            this.ucMap.Bearing = 0F;
+            this.ucMap.CanDragMap = true;
+            this.ucMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.ucMap.GrayScaleMode = false;
+            this.ucMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.ucMap.LevelsKeepInMemmory = 5;
+            this.ucMap.Location = new System.Drawing.Point(0, 0);
+            this.ucMap.MarkersEnabled = true;
+            this.ucMap.MaxZoom = 2;
+            this.ucMap.MinZoom = 2;
+            this.ucMap.MouseWheelZoomEnabled = true;
+            this.ucMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.ucMap.Name = "ucMap";
+            this.ucMap.NegativeMode = false;
+            this.ucMap.PolygonsEnabled = true;
+            this.ucMap.RetryLoadTile = 0;
+            this.ucMap.RoutesEnabled = true;
+            this.ucMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.ucMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.ucMap.ShowTileGridLines = false;
+            this.ucMap.Size = new System.Drawing.Size(518, 450);
+            this.ucMap.TabIndex = 2;
+            this.ucMap.Zoom = 0D;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gMap);
+            this.Controls.Add(this.ucMap);
             this.Controls.Add(this.pnlMenu);
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.Text = "GMap测试";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.pnlMenu.ResumeLayout(false);
             this.xPanderPanelList1.ResumeLayout(false);
             this.pnlPropertyView.ResumeLayout(false);
+            this.pnlOthers.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private GMap.NET.WindowsForms.GMapControl gMap;
         private WinForms.Panel pnlMenu;
         private WinForms.XPanderPanelList xPanderPanelList1;
         private WinForms.XPanderPanel pnlPropertyView;
-        private WinForms.XPanderPanel xPanderPanel2;
+        private WinForms.XPanderPanel pnlOthers;
         private WinForms.XPanderPanel xPanderPanel3;
         private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private UcMap ucMap;
+        private UcActions ucOthers1;
     }
 }
 
