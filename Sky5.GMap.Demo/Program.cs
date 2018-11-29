@@ -16,7 +16,7 @@ namespace Sky5.GMap.Demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+            Application.Run(new FrmMain());
         }
     }
 }
