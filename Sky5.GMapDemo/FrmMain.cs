@@ -33,6 +33,7 @@ namespace Sky5.GMapDemo
         {
             InitializeComponent();
             if (!GMapControl.IsDesignerHosted) this.Load += DesignerHost;
+            propertyGrid1.SelectedObject = gMap;
         }
 
         private void DesignerHost(object sender, EventArgs e)

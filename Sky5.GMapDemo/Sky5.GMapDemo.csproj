@@ -87,6 +87,10 @@
       <Project>{E06DEF77-F933-42FB-AFD7-DB2D0D8D6A98}</Project>
       <Name>GMap.NET.WindowsForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sky5.WinForms\Sky5.WinForms.csproj">
+      <Project>{55245df7-97ef-4aaf-9cf7-04ab98e7d7d7}</Project>
+      <Name>Sky5.WinForms</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
