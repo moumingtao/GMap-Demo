@@ -11,7 +11,7 @@
     <RootNamespace>System.Windows.Forms</RootNamespace>
     <AssemblyName>GMap.NET.WindowsForms</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
