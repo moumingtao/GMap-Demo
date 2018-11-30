@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomMarkers\GMapMarkerRect.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,9 @@
     </Compile>
     <Compile Include="UcMap.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcProperty.cs">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

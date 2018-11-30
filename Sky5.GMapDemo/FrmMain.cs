@@ -23,8 +23,8 @@ namespace Sky5.GMapDemo
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            propertyGrid1.SelectedObject = ucMap;
-            ucOthers1.Map = ucMap;
+            ucProperty.Init(ucMap);
+            ucOthers1.Init(ucMap);
         }
     }
 }

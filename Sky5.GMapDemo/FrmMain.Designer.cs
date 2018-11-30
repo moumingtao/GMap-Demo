@@ -31,7 +31,7 @@
             this.pnlMenu = new Sky5.WinForms.Panel();
             this.xPanderPanelList1 = new Sky5.WinForms.XPanderPanelList();
             this.pnlPropertyView = new Sky5.WinForms.XPanderPanel();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.ucProperty = new Sky5.GMapDemo.UcProperty();
             this.pnlOthers = new Sky5.WinForms.XPanderPanel();
             this.ucOthers1 = new Sky5.GMapDemo.UcActions();
             this.xPanderPanel3 = new Sky5.WinForms.XPanderPanel();
@@ -97,7 +97,7 @@
             // pnlPropertyView
             // 
             this.pnlPropertyView.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold);
-            this.pnlPropertyView.Controls.Add(this.propertyGrid1);
+            this.pnlPropertyView.Controls.Add(this.ucProperty);
             this.pnlPropertyView.CustomColors.BackColor = System.Drawing.SystemColors.Control;
             this.pnlPropertyView.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.pnlPropertyView.CustomColors.CaptionCheckedGradientBegin = System.Drawing.Color.Empty;
@@ -119,24 +119,25 @@
             this.pnlPropertyView.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.pnlPropertyView.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.pnlPropertyView.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
+            this.pnlPropertyView.Expand = true;
             this.pnlPropertyView.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlPropertyView.Image = null;
             this.pnlPropertyView.Name = "pnlPropertyView";
             this.pnlPropertyView.PanelStyle = Sky5.WinForms.PanelStyle.Office2007;
-            this.pnlPropertyView.Size = new System.Drawing.Size(282, 25);
+            this.pnlPropertyView.Size = new System.Drawing.Size(282, 371);
             this.pnlPropertyView.TabIndex = 0;
-            this.pnlPropertyView.Text = "地图属性";
+            this.pnlPropertyView.Text = "属性";
             this.pnlPropertyView.ToolTipTextCloseIcon = null;
             this.pnlPropertyView.ToolTipTextExpandIconPanelCollapsed = null;
             this.pnlPropertyView.ToolTipTextExpandIconPanelExpanded = null;
             // 
-            // propertyGrid1
+            // ucProperty
             // 
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid1.Location = new System.Drawing.Point(1, 25);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(280, 0);
-            this.propertyGrid1.TabIndex = 0;
+            this.ucProperty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucProperty.Location = new System.Drawing.Point(1, 25);
+            this.ucProperty.Name = "ucProperty";
+            this.ucProperty.Size = new System.Drawing.Size(280, 346);
+            this.ucProperty.TabIndex = 0;
             // 
             // pnlOthers
             // 
@@ -163,12 +164,11 @@
             this.pnlOthers.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.pnlOthers.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.pnlOthers.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
-            this.pnlOthers.Expand = true;
             this.pnlOthers.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlOthers.Image = null;
             this.pnlOthers.Name = "pnlOthers";
             this.pnlOthers.PanelStyle = Sky5.WinForms.PanelStyle.Office2007;
-            this.pnlOthers.Size = new System.Drawing.Size(282, 371);
+            this.pnlOthers.Size = new System.Drawing.Size(282, 25);
             this.pnlOthers.TabIndex = 1;
             this.pnlOthers.Text = "测试方法";
             this.pnlOthers.ToolTipTextCloseIcon = null;
@@ -181,7 +181,7 @@
             this.ucOthers1.ItemHeight = 12;
             this.ucOthers1.Location = new System.Drawing.Point(1, 25);
             this.ucOthers1.Name = "ucOthers1";
-            this.ucOthers1.Size = new System.Drawing.Size(280, 346);
+            this.ucOthers1.Size = new System.Drawing.Size(280, 0);
             this.ucOthers1.TabIndex = 0;
             // 
             // xPanderPanel3
@@ -270,7 +270,7 @@
         private WinForms.XPanderPanel pnlPropertyView;
         private WinForms.XPanderPanel pnlOthers;
         private WinForms.XPanderPanel xPanderPanel3;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private UcProperty ucProperty;
         private UcMap ucMap;
         private UcActions ucOthers1;
     }
