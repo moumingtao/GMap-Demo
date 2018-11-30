@@ -41,5 +41,10 @@ namespace Sky5.GMapDemo
             }
             SelectedObject = Map;
         }
+        protected override void OnSelectedObjectsChanged(EventArgs e)
+        {
+            base.OnSelectedObjectsChanged(e);
+            Text = SelectedObject == null ? string.Empty : SelectedObject.ToString();
+        }
     }
 }

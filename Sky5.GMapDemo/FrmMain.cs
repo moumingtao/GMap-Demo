@@ -24,7 +24,13 @@ namespace Sky5.GMapDemo
         private void FrmMain_Load(object sender, EventArgs e)
         {
             ucProperty.Init(ucMap);
-            ucOthers1.Init(ucMap);
+            ucProperty.TextChanged += UcProperty_TextChanged;
+            ucOthers1.Init(ucMap, ucProperty);
+        }
+
+        private void UcProperty_TextChanged(object sender, EventArgs e)
+        {
+            pnlPropertyView.Text = $"属性[{((Control)sender).Text}]";
         }
     }
 }

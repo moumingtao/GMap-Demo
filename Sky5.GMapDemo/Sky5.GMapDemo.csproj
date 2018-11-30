@@ -49,7 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomMarkers\GMapMarkerRect.cs" />
+    <Compile Include="Customs\GMapMarkerRect.cs" />
+    <Compile Include="Customs\MyToolTip.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
